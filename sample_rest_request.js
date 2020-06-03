@@ -19,6 +19,7 @@ host.url = "https://cava8-vc-001350.sqa.local";
 
 //YWRtaW5pc3RyYXRvckB2c3BoZXJlLmxvY2FsOlZNd2FyZTEh
 
+//requestBody would be populated with payload if you are using a POST as the requestMethod
 var requestBody = null;
 var requestMethod = "GET";
 var request = host.createRequest(requestMethod, "rest/vcenter/vm", requestBody);
@@ -34,7 +35,7 @@ request.setHeader("Authorization", "Basic YWRtaW5pc3RyYXRvckB2c3BoZXJlLmxvY2FsOl
 
 
 // Execute REST Request
-System.log("REST Request: " + requestMethod + " " + request.fullUrl);
+System.debug("REST Request: " + requestMethod + " " + request.fullUrl);
 var response = request.execute();
 
 // Output
@@ -42,4 +43,4 @@ var statusCodeAttribute = response.statusCode;
 System.log("REST Response Status Code: " + statusCodeAttribute);
 var responseAsString = response.contentAsString;
 
-System.log("REST Response Content: " + responseAsString);
+System.debug("REST Response Content: " + responseAsString);
