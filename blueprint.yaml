@@ -1,0 +1,59 @@
+name: CentOS-Simple
+version: 1
+formatVersion: 1
+inputs:
+  vm_memory:
+    type: integer
+    enum:
+      - 8192
+      - 4096
+      - 2048
+      - 1024
+      - 512
+      - 256
+    default: 1024
+    title: Memory
+    minimum: 256
+    maximum: 8192
+  environment:
+    type: string
+    title: Environment
+    default: DEV
+    enum:
+      - DEV
+      - QA
+      - PROD
+  app_criticality:
+    type: integer
+    title: Criticality
+    default: 1
+    enum:
+      - 1
+      - 2
+      - 3
+resources:
+  Cloud_vSphere_Network_1:
+    type: Cloud.vSphere.Network
+    properties:
+      networkType: existing
+  dev_svr:
+    type: Cloud.vSphere.Machine
+    properties:
+      image: centos
+      cpuCount: 1
+      totalMemoryMB: '${input.vm_memory}'
+      networks:
+        - network: '${resource.Cloud_vSphere_Network_1.id}'
+      attachedDisks:
+        - source: '${resource.Cloud_vSphere_Disk_1.id}'
+      environment: '${input.environment}'
+      app_criticality: '${input.app_criticality}'
+      objectType: vm
+  Cloud_vSphere_Disk_1:
+    type: Cloud.vSphere.Disk
+    properties:
+      capacityGb: 1
+      provisioningType: thin
+      app_criticality: '${input.app_criticality}'
+      environment: '${input.environment}'
+      objectType: disk
