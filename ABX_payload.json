@@ -3,52 +3,48 @@
     "projectId": "225a1a8f-5bb0-4191-a732-1cdfe647ff30",
     "requestId": "1a6b6ac8-9f44-400f-bbd8-ccdd534ebf6a",
     "__metadata": {
-        "orgId": "a91e12a4-46fd-40b6-b212-95b9bbbae58f",
-        "headers": {
-            "tokenId": "2qlq21iZ10ww4vSpwQGdN3Wnx4s+Bo/hVaVj8THS900=",
-            "blocking": "false",
-            "runnableId": "8a7480d9721eb7ac01727b7f97ea0076",
-            "runnableType": "extensibility.abx",
-            "uber-trace-id": "a8f8b2614fc34111a423af6c2d288b3e:24544e8d48d34f9c80b06b9cb894f9f7:63f087c7-0f36-46e5-9f36-ff01e1419afd:0",
-            "uberctx-org-id": "a91e12a4-46fd-40b6-b212-95b9bbbae58f",
-            "uberctx-user-id": "provisioning-lLT598jDaYsJ8WNT",
-            "eventTraceEntryId": "4ee73cc0-305f-4b55-b8cc-58e094536214",
-            "sampling-decision": "false",
-            "uberctx-parent-id": "63f087c7-0f36-46e5-9f36-ff01e1419afd",
-            "provisioning-callback-uri": "/provisioning/config/extensibility-callbacks/67a6fdbb-6781-49ef-9369-c54a4a4f0f30"
-        },
-        "targetId": "1935c38c-ed51-4711-a77d-550b37f50ec2",
-        "userName": "configadmin",
-        "eventType": "EVENT",
-        "timeStamp": 1591210800429,
-        "sourceType": "provisioning",
-        "targetType": "ComputeAllocationTaskState",
-        "eventTopicId": "compute.allocation.pre",
-        "correlationId": "c3fb40a7-890c-41a9-8f91-3d1599cc8fd4--1a6b6ac8-9f44-400f-bbd8-ccdd534ebf6a",
-        "sourceIdentity": "255d825c-c084-4496-888c-326001b79024",
-        "correlationType": "contextId"
+      "orgId": "a91e12a4-46fd-40b6-b212-95b9bbbae58f",
+      "headers": {
+        "tokenId": "2qlq21iZ10ww4vSpwQGdN3Wnx4s+Bo/hVaVj8THS900=",
+        "blocking": "false",
+        "runnableId": "8a7480d9721eb7ac01727b7f97ea0076",
+        "runnableType": "extensibility.abx",
+        "uber-trace-id": "110a89c258334aa9ace44742dc82cdc7:3c2a2a3ff5fc4c69b25bf576c8a43602:a7b00121-b445-4c9d-a428-d1ed712b527c:0",
+        "uberctx-org-id": "a91e12a4-46fd-40b6-b212-95b9bbbae58f",
+        "uberctx-user-id": "provisioning-lLT598jDaYsJ8WNT",
+        "eventTraceEntryId": "3dc4f1d8-b0a7-4028-9f61-0d4ced53ffc6",
+        "sampling-decision": "false",
+        "uberctx-parent-id": "a7b00121-b445-4c9d-a428-d1ed712b527c",
+        "provisioning-callback-uri": "/provisioning/config/extensibility-callbacks/0be393a7-272f-49ce-a866-f50eb5fbe394"
+      },
+      "targetId": "f221ba62-e695-433e-b095-04096660c6b5",
+      "userName": "configadmin",
+      "eventType": "EVENT",
+      "timeStamp": 1591210796505,
+      "sourceType": "provisioning",
+      "targetType": "DiskOperationTaskState",
+      "eventTopicId": "disk.allocation.pre",
+      "correlationId": "c3fb40a7-890c-41a9-8f91-3d1599cc8fd4--1a6b6ac8-9f44-400f-bbd8-ccdd534ebf6a",
+      "sourceIdentity": "255d825c-c084-4496-888c-326001b79024",
+      "correlationType": "contextId"
     },
-    "endpointId": "1df2be1c-b4ee-404c-bd5e-3289acbcc7b6",
     "blueprintId": "8d756e3e-a440-47d1-a1ba-eaf7bac46a96",
-    "componentId": "dev_svr",
+    "componentId": "Cloud_vSphere_Disk_1",
     "externalIds": [
-        "224ab1d0-a1c4-424a-bc5f-da649f1d6313"
+      "abac9bea-962b-4396-9d3e-3330a0f59698"
     ],
     "resourceIds": [
-        "ae684f26-4351-4738-8ff0-86128e6b4869"
+      "ecea16d2-6436-476c-9dfe-a790f9a2def7"
     ],
     "deploymentId": "c3fb40a7-890c-41a9-8f91-3d1599cc8fd4",
-    "resourceNames": [
-        "configadmin-065"
+    "diskSizesInGb": [
+      1
     ],
-    "componentTypeId": "Cloud.vSphere.Machine",
+    "componentTypeId": "Cloud.vSphere.Disk",
     "customProperties": {
-        "image": "centos",
-        "objectType": "vm",
-        "environment": "DEV",
-        "app_criticality": "1"
-    },
-    "hostSelectionIds": [
-        "d76a93d7-6a55-4711-9fc8-97cebec252dd"
-    ]
-}
+      "objectType": "disk",
+      "environment": "DEV",
+      "app_criticality": "1",
+      "provisioningType": "thin"
+    }
+  }
